@@ -6,11 +6,12 @@ public class BlockController : MonoBehaviour
     Vector3 m_pos;
 
     int m_colCount = 0;
-
+    Rigidbody2D m_rb;
     [SerializeField] int canIntrract = 1;
     private void Start()
     {
         m_pos = transform.position;
+        m_rb = GetComponent<Rigidbody2D>();
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
